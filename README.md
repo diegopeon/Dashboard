@@ -1,141 +1,184 @@
-📊 Dashboard de Locadora de Veículos
+# 🚗 Dashboard Interativo - Locadora de Veículos
 
-Sistema em Streamlit + Python que lê automaticamente três arquivos CSV (clientes, veículos e locações) e gera um dashboard interativo completo.
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](https://streamlit.io/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 
-✅ 1. Visão Geral
+Um dashboard completo desenvolvido em **Streamlit + Python** para análise e gestão de locadora de veículos, com visualizações interativas e relatórios automáticos.
 
-Este projeto fornece um dashboard para análise de uma locadora de veículos, incluindo:
+## 📋 Índice
 
-Frota
+- [Visão Geral](#-visão-geral)
+- [Funcionalidades](#-funcionalidades)
+- [Pré-requisitos](#-pré-requisitos)
+- [Instalação e Configuração](#-instalação-e-configuração)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Execução](#-execução)
+- [Módulos do Dashboard](#-módulos-do-dashboard)
+- [Formatos de Arquivo Suportados](#-formatos-de-arquivo-suportados)
+- [Suporte Técnico](#-suporte-técnico)
 
-Clientes
+## 🎯 Visão Geral
 
-Histórico de locações
+Sistema inteligente que processa automaticamente dados de clientes, veículos e locações para fornecer insights estratégicos através de um dashboard interativo e fácil de usar.
 
-Indicadores financeiros
+## ✨ Funcionalidades
 
-Tendências por período
+### 📊 **Módulo de Visão Geral**
+- **KPIs Principais**: Total de clientes, veículos, locações e receita
+- **Métricas em Tempo Real** com tendências e comparações
+- **Visão consolidada** do negócio
 
-O sistema lê automaticamente três arquivos CSV e gera visualizações inteligentes com filtros, KPIs e tabelas agrupadas.
+### 🚙 **Módulo de Frota**
+- **Análise por Categoria**: Distribuição de veículos por tipo
+- **Status da Frota**: Disponibilidade e manutenção
+- **Combustível**: Análise por tipo de motorização
+- **Tabela Detalhada** com informações completas dos veículos
 
-📁 2. Estrutura de Arquivos Necessários
+### 👥 **Módulo de Clientes**
+- **Top Clientes**: Ranking por número de locações
+- **Perfil de Clientes**: Análise comportamental
+- **Base de Dados** completa de clientes
 
-Você deve baixar os três arquivos CSV nesta pasta do Google Drive:
+### 📅 **Módulo de Locações**
+- **Filtros Avançados** por período e características
+- **Receita por Mês**: Análise temporal e sazonalidade
+- **Histórico Detalhado** de todas as locações
 
-📦 Download:
-👉 https://drive.google.com/file/d/1yyom-Kx305sgUGVB26D4BIuRxt4pWIac/view?usp=sharing
+### 💰 **Módulo Financeiro**
+- **Estatísticas de Valores**: Média, mediana e distribuição
+- **Análise de Rentabilidade** por veículo e categoria
+- **Relatórios Financeiros** consolidados
 
-Descompacte o .zip baixado e coloque estes arquivos na mesma pasta do projeto:
+## 🛠 Pré-requisitos
 
-client.csv
-client_0.csv
-vehicle_0.csv
+- **Python 3.10+**
+- **Streamlit**
+- **Pandas**
 
-🛠 3. Requisitos
+## ⚙️ Instalação e Configuração
 
-Python 3.10+
+### 1. Clone ou baixe o projeto
+```bash
+git clone https://github.com/seu-usuario/dashboard-locadora.git
+cd dashboard-locadora
+```
 
-Streamlit
-
-Pandas
-
-Instale as dependências:
-
+### 2. Instale as dependências
+```bash
 pip install streamlit pandas
+```
 
-📦 4. Estrutura Recomendada do Projeto
-/dashboard-locadora
+### 3. Download dos dados de exemplo
+📥 **Baixe os arquivos CSV necessários:**
+[Google Drive - Dados da Locadora](https://drive.google.com/file/d/1yyom-Kx305sgUGVB26D4BIuRxt4pWIac/view?usp=sharing)
+
+**Após download, descompacte e posicione na pasta do projeto:**
+- `client.csv`
+- `client_0.csv` 
+- `vehicle_0.csv`
+
+## 📁 Estrutura do Projeto
+
+```
+dashboard-locadora/
 │
-├── app.py
-├── client.csv
-├── client_0.csv
-├── vehicle_0.csv
-└── README.md
+├── app.py                          # Aplicação principal Streamlit
+├── client.csv                      # Dados de clientes
+├── client_0.csv                    # Dados adicionais de clientes
+├── vehicle_0.csv                   # Dados da frota de veículos
+├── requirements.txt                # Dependências do projeto
+└── README.md                       # Documentação
+```
 
-▶️ 5. Como Rodar o Projeto
-1️⃣ Abra o terminal (CMD / PowerShell)
-2️⃣ Navegue até a pasta do projeto:
-cd caminho/para/dashboard-locadora
+## 🚀 Execução
 
-3️⃣ Execute o dashboard usando Streamlit:
+### Método Recomendado (Streamlit)
+```bash
 streamlit run app.py
+```
 
+### ⚠️ Importante
+**NÃO execute com:** `python app.py`  
+**SEMPRE use:** `streamlit run app.py`
 
-⚠️ Importante:
-NÃO execute usando python app.py — Streamlit precisa rodar com o comando streamlit run.
-
-4️⃣ O navegador abrirá automaticamente em:
+### Acesso ao Dashboard
+Após executar o comando, o sistema automaticamente abrirá no navegador:
+```
 http://localhost:8501
+```
 
+**Se não abrir automaticamente:**
+1. Copie o link acima
+2. Cole manualmente no navegador
+3. O dashboard estará pronto para uso!
 
-Se não abrir, copie e cole o link manualmente.
+## 🔧 Módulos do Dashboard
 
-🔧 6. Suporte a Múltiplos Formatos de CSV
+### 🔹 Visão Geral
+- **KPIs Principais** em cards destacados
+- **Métricas Financeiras** consolidadas
+- **Visão 360°** do negócio
 
-Os arquivos CSV do projeto podem vir com:
+### 🔹 Frota 
+- **Gráficos de Distribuição** por categoria e status
+- **Análise de Combustível**
+- **Tabela Interativa** com filtros
 
-separador vírgula ( , )
+### 🔹 Clientes
+- **Ranking de Melhores Clientes**
+- **Análise de Fidelidade**
+- **Base de Dados Completa**
 
-separador ponto e vírgula ( ; )
+### 🔹 Locações
+- **Filtros por Período** (mensal, trimestral, anual)
+- **Gráfico de Receita Temporal**
+- **Tabela de Locações** com detalhes
 
-encoding UTF-8
+### 🔹 Financeiro
+- **Estatísticas Descritivas** dos valores
+- **Distribuição de Preços**
+- **Análise de Rentabilidade**
 
-encoding Latin-1
+## 📄 Formatos de Arquivo Suportados
 
-linhas quebradas ou inconsistentes
+O sistema possui **inteligência automática** para detectar e processar diferentes formatos de CSV:
 
-A função load_csv() do sistema já tenta automaticamente todas as combinações e ajusta:
+### ✅ Separadores Suportados
+- Vírgula (`,`)
+- Ponto e vírgula (`;`)
 
-encoding
+### ✅ Encodings Suportados
+- UTF-8
+- Latin-1 (ISO-8859-1)
 
-separator
+### ✅ Tratamento de Erros
+- **Linhas inconsistentes**: Ignoradas automaticamente
+- **Dados faltantes**: Processados com resiliência
+- **Formato variável**: Detectado automaticamente
 
-engine
+## 🆘 Suporte Técnico
 
-Ignora linhas inválidas (on_bad_lines='skip')
+### Problemas Comuns e Soluções
 
-🧭 7. Como Usar o Dashboard
+**❌ Erro ao carregar arquivos CSV:**
+- Verifique se os arquivos estão na pasta correta
+- Confirme os nomes exatos dos arquivos
+- Teste com os dados de exemplo do Google Drive
 
-O dashboard contém abas e métricas:
+**❌ Dashboard não abre:**
+- Execute `streamlit run app.py` (não `python app.py`)
+- Verifique se a porta 8501 não está ocupada
+- Confirme a instalação do Streamlit
 
-🔹 Visão Geral
+**❌ Dados não aparecem:**
+- Verifique o formato dos arquivos CSV
+- Confirme o encoding (tente salvar como UTF-8)
+- Teste com os dados de exemplo
 
-KPIs principais:
+### 📞 Contato para Suporte
+Em caso de problemas persistentes, entre em contato com a equipe de desenvolvimento.
 
-total de clientes
+---
 
-total de veículos
-
-total de locações
-
-receita total
-
-🔹 Frota
-
-veículos por categoria
-
-veículos por status
-
-tipo de combustível
-
-tabela dos veículos
-
-🔹 Clientes
-
-top clientes por número de locações
-
-tabela de clientes
-
-🔹 Locações
-
-filtro por período
-
-receita por mês
-
-tabela de locações detalhada
-
-🔹 Financeiro
-
-estatísticas dos valores
-
-distribuição das locações
+**Desenvolvido com ❤️ usando Streamlit + Python**  
+*Sistema de Dashboard para Locadora de Veículos - Versão 1.0*
